@@ -45,11 +45,11 @@ app.MapControllers();
 
 // apply outstanding migrations
 // dotnet ef database update
-// using (var scope = app.Services.CreateScope()) {
-//     var services = scope.ServiceProvider;
+using (var scope = app.Services.CreateScope()) {
+    var services = scope.ServiceProvider;
 
-//     var context = services.GetRequiredService<HealthContext>();    
-//     context.Database.Migrate();
-// }
+    var context = services.GetRequiredService<HealthContext>();    
+    context.Database.Migrate();
+}
 
 app.Run();
