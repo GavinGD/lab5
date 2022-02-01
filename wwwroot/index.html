@@ -13,7 +13,7 @@
     <script>
       $(function () {
         var getPatients = function () {
-          var url = "https://localhost:7107/api/patients/";
+          var url = "https://gavingdlab05.azurewebsites.net/api/patients";
           $.get(url).always(showResponse);
           return false;
         };
